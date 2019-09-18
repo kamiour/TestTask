@@ -1,0 +1,11 @@
+.section {
+  padding: 0;
+  padding-top: 48px;
+  padding-bottom: 73px;
+  margin: 0;
+
+  &-button {
+    @include flex(center, center);
+    margin-top: -10px;
+  }
+}

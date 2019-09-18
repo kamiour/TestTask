@@ -1,0 +1,36 @@
+.grid {
+  @include flex(space-between, stretch);
+  flex-wrap: wrap;
+
+  &.section-layout {
+    @media screen and (min-width: $size-m) {
+      @include spacing($spacing-m);
+    }
+
+    @media screen and (min-width: $size-l) {
+      @include spacing($spacing-l);
+    }
+
+    @media screen and (min-width: $size-xl) {
+      @include spacing($spacing-xl);
+    }
+  }
+
+  &.footer-layout {
+    @media screen and (min-width: $footer-size-m) {
+      @include spacing($spacing-m);
+    }
+
+    @media screen and (min-width: $footer-size-l) {
+      @include spacing($spacing-l);
+    }
+
+    @media screen and (min-width: $footer-size-xl) {
+      @include spacing($spacing-xl);
+    }
+  }
+
+  .card-cost & {
+    @include flex(flex-start, baseline);
+  }
+}

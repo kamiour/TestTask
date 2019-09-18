@@ -1,0 +1,22 @@
+{
+  "name": "yellowmoon",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Mykhailo Kazakov"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*",
+    "jquery-ui": "1.10.4"
+  }
+}

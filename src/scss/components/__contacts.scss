@@ -1,0 +1,64 @@
+.contacts {
+  list-style-type: none;
+  padding: 0;
+
+  & .contacts-li-group {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    & > li {
+      display: flex;
+      height: max-content;
+    }
+  }
+
+  & .contacts-li {
+    @include flex(flex-start, center);
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-left: 35px;
+
+    &:before {
+      display: inline-block;
+      width: 35px;
+      padding-right: 10px;
+      margin-left: -35px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & .contacts-a {
+      text-decoration: none;
+      color: $color-additional;
+      @include font(11px, 300, 20px);
+      word-break: break-word;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.phone-icon::before {
+      content: url(../images/footer/phone.svg);
+    }
+    
+    &.marker-icon::before {
+      content: url(../images/footer/marker.svg);
+    }
+    
+    &.message-icon::before {
+      content: url(../images/footer/message.svg);
+    }
+    
+    &.skype-icon::before {
+      content: url(../images/footer/skype.svg);
+    }
+  }
+}

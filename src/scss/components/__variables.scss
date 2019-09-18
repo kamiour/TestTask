@@ -1,0 +1,32 @@
+$f-family-main: 'Ubuntu', sans-serif;
+$f-family-second: 'Raleway', sans-serif;
+$f-family-third: 'myriad-pro', sans-serif;;
+$f-size-main: 16px;
+$f-weight-main: 400;
+$f-weight-bold: 700;
+$f-lheight-main: 20px;
+
+$color-main: #333333;
+$color-reverse: white;
+$color-secondary: #ed1111;
+$color-additional: #a5a4a4;
+$color-additional-dark: #999e9f;
+
+$color-button-secondary: #d9d9d9;
+$color-button-hover: #ed8e8e;
+
+$element-border: 1px solid #e5e5e5;
+
+$size-m: 560px;
+$size-l: 830px;
+$size-xl: 1100px;
+
+$spacing-m: 6px;
+$spacing-l: 10px;
+$spacing-xl: 15px;
+
+$footer-size-m: (($size-m) + (1 * 2 * ($spacing-m)));
+$footer-size-l: (($size-l) + (2 * 2 * ($spacing-l)));
+$footer-size-xl: (($size-xl) + (3 * 2 * ($spacing-xl)));
+
+$container-size: (($size-xl) + (3 * 2 * ($spacing-xl)));

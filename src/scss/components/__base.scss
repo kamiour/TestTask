@@ -1,0 +1,79 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+  color: $color-main;
+  font-family: $f-family-main;
+  @include font($f-size-main, $f-weight-main, $f-lheight-main);
+  letter-spacing: 0.5px;
+}
+
+.container {
+  max-width: $container-size;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+body {  
+  margin: 0;
+}
+
+.font-second {
+  font-family: $f-family-second;
+}
+
+.font-third {
+  font-family: $f-family-third;
+}
+
+.col {
+  margin: 0 auto;
+
+  .section & {
+    margin-bottom: 50px;
+  }
+
+  .footer & {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $size-m) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.67em 0;
+}
+
+* + h1, * + h2, * + h3,* + h4,* + h5,* + h6 {
+  margin: 0.67em 0 0 0;
+}
+
+p, ul, ol, figure {
+  margin: 0 0 15px 0;
+}
+
+div > p {
+  margin-bottom: 0;
+}
+
+* + p, * + ul, * + ol, * + figure{
+  margin-top: 15px;
+}
+
+ul {
+  padding: 0 0 0 40px;
+  margin: 0;
+}
+
+ul > li > ol,
+ul > li > ul,
+ol > li > ul,
+ol > li > ol {
+  margin: 0;
+}
+

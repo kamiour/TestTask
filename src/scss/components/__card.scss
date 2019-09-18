@@ -1,0 +1,104 @@
+.card {
+  @include flex(flex-start, center);
+  flex-direction: column;
+  height: 100%;
+  padding: 9px;
+  border: $element-border;
+  width: 270px;
+
+  &:hover {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+  }
+
+  &-header {
+    position: relative;
+    width: 100%;
+    margin-bottom: 17px;
+
+    .card-media {
+      padding: 8px;
+      margin: 0;
+      border: $element-border;
+      background-color: $color-reverse;
+      margin-top: -30px;
+
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .card-foreground {
+      @include overlay(2, transparent, 1);
+      padding: 0;
+      @include flex(center, center);
+
+      & > * {
+        position: absolute;
+        width: 72px;
+        @include flex(center, center);
+        padding: 13px 0;
+        @include font(13px, 500, 1);
+        text-transform: uppercase;
+        color: $color-reverse;
+      }
+
+      .card-label-sale {
+        background-color: $color-secondary;
+        left: 0;
+      }
+
+      .card-label-new {
+        background-color: $color-main;
+        right: 0;
+      }
+    }
+  }
+
+  &-body {
+    flex-grow: 1;
+    width: 100%;
+
+    & > * {
+      word-break: break-word;
+    }
+
+    .card-title {
+      margin: 0;
+      @include font(14px, 600, 22px);
+      color: $color-main;
+      margin-bottom: 14px;
+    }
+  
+    .card-description {
+      color: $color-additional;
+      @include font(11px, 300, 15px);
+      margin-bottom: 24px;
+    }
+  }
+
+  &-footer {
+    width: 100%;
+
+    .card-cost {
+      margin: 0;
+      margin-bottom: 28px;
+
+      &-current, &-old {
+        margin: 0;
+      }
+
+      &-current {
+        @include font(25px, 400, 26px);
+        margin-right: 20px;
+      }
+
+      &-old {
+        @include font(17px, 400, 1);
+        color: $color-secondary;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

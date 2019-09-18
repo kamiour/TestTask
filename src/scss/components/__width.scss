@@ -1,0 +1,16 @@
+$column: 12;
+
+@mixin grid($m-width, $size) {
+  @media (min-width: $m-width) {
+    @for $i from 1 through $column {
+      .col-#{$i}#{$size} {
+        width: 100%/($column/$i);
+      }
+    }
+  }
+}
+
+@include grid(0, '');
+@include grid($footer-size-m, m);
+@include grid($footer-size-l, l);
+@include grid($footer-size-xl, xl)

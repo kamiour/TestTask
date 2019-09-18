@@ -1,0 +1,22 @@
+.button {
+  @include flex(center, flex-end);
+  @include button($color-secondary, $color-reverse, 15px, 0, none, 0, uppercase);
+  @include font(13px, 600, 1);
+  width: 120px;
+  transition-duration: 0.3s;
+  border: $element-border;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &-secondary, &-secondary:hover {
+    background-color: $color-button-secondary;
+    color: $color-additional-dark;
+    @include font(12px, 400, 1);
+  }
+
+  .section-button & {
+    @include font(13px, 400, 1);
+  }
+}
